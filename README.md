@@ -21,7 +21,7 @@ The accuracy is not provided but it looks more accurate than Pattern.en.
 There are still errors due to incompleteness of inflection rules.
 We can correct each specific error with en-inflectors but it is still difficult because inflection rules are combined into complex regular expression.
 
-## Verb conjugation (auxiliary/model verbs)
+## Verb conjugation (auxiliary/model verbs as well)
 Verbs are inflected to express tense, voice, person, number, etc. and it is called conjugation.
 * There are 5 spellings after conjugation
   * infinitive - original form that can be found in English dictionary
@@ -29,11 +29,11 @@ Verbs are inflected to express tense, voice, person, number, etc. and it is call
   * present progressive/continuous(PC) - basic rule is putting 'ing' (go > going)
   * past(PA) - basic rule is putting 'ed' (watch > watched)
   * past participle(PP) - basic rule is putting 'ed' (watch > watched)
-* Auxiliary verbs may not have all 4 spellings (no PP spelling for can, will, ..)
 * Some verbs may have two or more spellings for a specific conjugation that can be used interchangeably.
 * Some verbs have two or more different spellings for a specific conjugation according to the meaning.
 * Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (go > goes)
 * There are many verbs that do not follow the basic or modified rule and those can be called irregular conjugation.
+* Auxiliary verbs may not have all 4 spellings (no PP spelling for can, will, ..)
 
 ## Noun pluralization (numbers as well)
 Nouns are inflected to express number, that is plural.
@@ -44,7 +44,7 @@ Nouns are inflected to express number, that is plural.
 * Some nouns have two or more different spellings for plural according to the meaning.
 * Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (box > boxes)
 * There are many nouns that do not follow the basic or modified rule and those can be called irregular pluralization.
-* numbers may have plural (fifty > fifties)
+* numbers may have plural (fifty > fifties), thus their pluralization should be supported
 * pronouns may have plural but mostly is not inflection but another word (I > we), except for other (other > others)
 
 ## Adjective/adverb comparison (some determiners as well)
@@ -60,7 +60,7 @@ Adjective and adverbs are inflected to express comparison.
 * Some words have two or more different spellings for comparative/superlative according to the meaning.
 * Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (pretty > prettier)
 * There are many adjectives/adverbs that do not follow the basic or modified rule and those can be called irregular comparative/superlative.
-* Quantifiers, kinds of determiner, may have comparative/superlative (few/fewer/fewest, little/less/least)
+* Quantifiers, kinds of determiner, may have comparative/superlative (few/fewer/fewest, little/less/least) thus their inflection should be supported
 
 ## Software requiremants
 * modules: get_conjugation, get_plural, get_comparative

@@ -2,8 +2,8 @@
 Python codes for generating inflected English words (conjugation, plural, comparative/superlative)
 
 There are two notable previous works for generating inflected words for English language.\
-https://github.com/clips/pattern https://www.clips.uantwerpen.be/pages/pattern-en\
-https://github.com/FinNLP/en-inflectors http://en-inflectors.surge.sh/\
+https://github.com/clips/pattern https://www.clips.uantwerpen.be/pages/pattern-en \
+https://github.com/FinNLP/en-inflectors http://en-inflectors.surge.sh/
 
 Pattern.en is a quite impressive project of applying ML to NLP including inflection.
 The accuray of inflection using Pattern.en is said to be above 90%.

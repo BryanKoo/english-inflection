@@ -21,8 +21,8 @@ The accuracy is not provided but it looks more accurate than Pattern.en.
 There are still errors due to incompleteness of inflection rules.
 We can correct each specific error with en-inflectors but it is still difficult because inflection rules are combined into complex regular expression.
 
-## Verb conjugation
-Verbs(auxiliary/modal verbs) are inflected to express tense, voice, person, number, etc. and it is called conjugation.
+## Verb conjugation (auxiliary/model verbs)
+Verbs are inflected to express tense, voice, person, number, etc. and it is called conjugation.
 * There are 5 spellings after conjugation
   * infinitive - original form that can be found in English dictionary
   * third person singular(TS) - basic rule is putting 's' (take > takes)
@@ -35,7 +35,7 @@ Verbs(auxiliary/modal verbs) are inflected to express tense, voice, person, numb
 * Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (go > goes)
 * There are many verbs that do not follow the basic or modified rule and those can be called irregular conjugation.
 
-## Noun pluralization
+## Noun pluralization (numbers as well)
 Nouns are inflected to express number, that is plural.
 * There are 2 spellings; singular and plural
   * basic rule is putting 's' (book > books)
@@ -44,8 +44,10 @@ Nouns are inflected to express number, that is plural.
 * Some nouns have two or more different spellings for plural according to the meaning.
 * Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (box > boxes)
 * There are many nouns that do not follow the basic or modified rule and those can be called irregular pluralization.
+* numbers may have plural (fifty > fifties)
+* pronouns may have plural but mostly is not inflection but another word (I > we), except for other (other > others)
 
-## Adjective/adverb comparison
+## Adjective/adverb comparison (some determiners as well)
 Adjective and adverbs are inflected to express comparison.
 * There are 3 spellings after inflection when a word has 1 syllable.
   * positive
@@ -58,13 +60,15 @@ Adjective and adverbs are inflected to express comparison.
 * Some words have two or more different spellings for comparative/superlative according to the meaning.
 * Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (pretty > prettier)
 * There are many adjectives/adverbs that do not follow the basic or modified rule and those can be called irregular comparative/superlative.
+* Quantifiers, kinds of determiner, may have comparative/superlative (few/fewer/fewest, little/less/least)
 
 ## Software requiremants
-* Develop AI-based software that calculated distance between any 2 korean patents
-  * Similar patents should be close to each other
-  * A patent and its prior art should be close to each other
-  * Patents with different topic should not be close to each other
-  * Patents with different classifications should not be close to each other
+* modules: get_conjugation, get_plural, get_comparative
+  * prerequisite: irregular inflection list for conjugation, pluralization, comparison
+  * input: word, inflection_type(if applicable)
+  * check if input word is infinitive/singular/positive or not
+  * obtain inflections regarding the input word
+  * output: infinitive/singular/positive, inflected word list with inflection type tag
 
 ## Process breakdown
 * Read irregular inflection list from file

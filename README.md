@@ -17,9 +17,9 @@ The accuray of inflection using Pattern.en is said to be above 90%.
 The problem is that we cannot correct each specific error because ML is not deterministic.
 
 en-inflectors is a small project when compared to Pattern.en and rule-based.
-The accuracy is not provided bit it looks higher than Pattern.en.
+The accuracy is not provided but it looks more accurate than Pattern.en.
 There are still errors due to incompleteness of inflection rules.
-We can correct each specific error with en-inflectors but it is still difficult because inflection rules are combined using regular expression.
+We can correct each specific error with en-inflectors but it is still difficult because inflection rules are combined into complex regular expression.
 
 ## Verb conjugation
 Verbs(auxiliary/modal verbs) are inflected to express tense, voice, person, number, etc. and it is called conjugation.
@@ -45,19 +45,19 @@ Nouns are inflected to express number, that is plural.
 * Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (box > boxes)
 * There are many nouns that do not follow the basic or modified rule and those can be called irregular pluralization.
 
-## Adjective/Adverb comparison
+## Adjective/adverb comparison
 Adjective and adverbs are inflected to express comparison.
-* 
-* There are 3 spellings after inflection when a word is short
+* There are 3 spellings after inflection when a word has 1 syllable.
   * positive
   * comparative - basic rule is putting 'er' (fast > faster)
   * superlative - basic rule is putting 'est' (fast > fastest)
+* When a word has more than 3 syllables, there are no inflection but use more/most for comparative/superlative.
+* Words with 2 syllable are irregular, some use inflection and some use more/most and some use both.
 * Some words are uncomparable.
 * Some words have two or more different spellings for comparative/superlative that can be used interchangeably.
 * Some words have two or more different spellings for comparative/superlative according to the meaning.
-* Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (box > boxes)
-* There are many nouns that do not follow the basic or modified rule and those can be called irregular pluralization.
-
+* Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (pretty > prettier)
+* There are many adjectives/adverbs that do not follow the basic or modified rule and those can be called irregular comparative/superlative.
 
 ## Software requiremants
 * Develop AI-based software that calculated distance between any 2 korean patents

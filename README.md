@@ -24,8 +24,8 @@ There are still errors due to incompleteness of inflection rules.
 We can correct each specific error with en-inflectors but it is difficult because inflection rules are combined into complex regular expressions.
 
 ML focuses on overall performance or accuracy not each specific case.
-ML inferencing are usually much slower than rule-based implementation.
-There are no good reason to use ML for inflection.
+ML inferencing is usually much slower than rule-based implementation.
+There is no good reason to use ML for inflection.
 
 ## Verb conjugation (auxiliary/model verbs as well)
 Verbs are inflected to express tense, voice, person, number, etc. and it is called conjugation.

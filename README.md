@@ -1,5 +1,5 @@
 # english-inflection
-Python codes for generating inflected English words (conjugation, plural, comparative/superlative)
+Python codes for generating inflected English words (conjugation, plural, comparative/superlative)\
 There are some works for generating inflected words for English language, but the quality is not very satisfactory.
 https://github.com/clips/pattern 
 https://github.com/FinNLP/en-inflectors 

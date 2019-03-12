@@ -1,10 +1,18 @@
 # english-inflection
-Python codes for generating inflected English words (conjugation, plural, comparative/superlative)\
-There are some works for generating inflected words for English language, but the quality is not very satisfactory.
-https://github.com/clips/pattern 
-https://github.com/FinNLP/en-inflectors 
-The reason of low quality is from either incompleteness of inflection rules or scarce data for ML.
-Because inflection is irregular and time-variant thus it is not a good application area of ML(machine learning).
+Python codes for generating inflected English words (conjugation, plural, comparative/superlative)
+
+There are two notable previous works for generating inflected words for English language.
+https://github.com/clips/pattern https://www.clips.uantwerpen.be/pages/pattern-en
+https://github.com/FinNLP/en-inflectors http://en-inflectors.surge.sh/
+Pattern.en is a quite impressive project of applying ML to NLP including inflection.
+The accuray of inflection using Pattern.en is said to be above 90%.
+The problem of ML is that it is not deterministic and thus you cannot correct each specific error.
+
+from incompleteness of inflection rules and
+
+## Machine Learning or Rule-based ?
+Inflection is very irregular and time-variant.
+thus it is not a good application area of ML(machine learning).
 This project explains inflections in detail and then provides codes for inflection.
 
 ## Verb conjugation

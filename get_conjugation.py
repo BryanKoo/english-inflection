@@ -275,7 +275,7 @@ def regular_one_syllable(word):
       return ['TS:'+word+'s', 'PC:'+word+word[-1]+'ing', 'PA:'+word+word[-1]+'ed', 'PP:'+word+word[-1]+'ed']
   return None
 
-def regular_ends_e(word):
+def regular_endswith_e(word):
   if word[-1] == 'e':
     if word[-2] in ['e', 'y', 'o']: # free, dye, tiptoe
       return ['TS:'+word+'s', 'PC:'+word+'ing', 'PA:'+word+'d', 'PP:'+word+'d']
@@ -286,7 +286,7 @@ def regular_ends_e(word):
   else:
     return None
 
-def regular_ends_y(word):
+def regular_endswith_y(word):
   if word[-1] == 'y':
     if word[-2] in consonants:  # study, fly, carry, cry, worry, reply
       return ['TS:'+word[:-1]+'ies', 'PC:'+word+'ing', 'PA:'+word[:-1]+'ied', 'PP:'+word[:-1]+'ied']
@@ -295,30 +295,31 @@ def regular_ends_y(word):
   else:
     return None
 
-def regular_ends_s(word):
-  if word.endswith('ch') or word.endswith('sh') or word[-1] == 'x' or word[-1] == 's' or word[-1] == 'z' or word[-1] == 'o': # kiss, bless, box, polish, preach, solo
+# put es instead of s for 3rd person singular for a verb ends with s(ss), sh, ch, x, z, o
+# kiss, buzz, box, polish, preach, solo
+def regular_third_singular_es(word):
+  if word.endswith('ch') or word.endswith('sh') or word[-1] == 'x' or word[-1] == 's' or word[-1] == 'z' or word[-1] == 'o':
     return ['TS:'+word+'es', 'PC:'+word+'ing', 'PA:'+word+'ed', 'PP:'+word+'ed']
   else:
     return None
 
-def ends_l(word): # irregular covers
+# Verbs with more than one syllable ending in l double the final letter before suffixing in Britain English
+# cancel > cancelled (US canceled)
+# handled as irregular conjugation
+def ends_l(word):
   pass
 
-def regular_ends_c(word):
+def regular_endswith_c(word):
   if word.endswith('c'): # panic, mimic, traffic, picnic
     return ['TS:'+word+'s', 'PC:'+word+'king', 'PA:'+word+'ked', 'PP:'+word+'ked']
   else:
     return None
 
-def ends_long_vowel(word):
-  if word[-1] in vowels and word[-2] in vowels:
-    pass
-
 def get_regular_conju(word):
-  conju = regular_ends_e(word)
-  if conju == None: conju = regular_ends_y(word)
-  if conju == None: conju = regular_ends_s(word)
-  if conju == None: conju = regular_ends_c(word)
+  conju = regular_endswith_e(word)
+  if conju == None: conju = regular_endswith_y(word)
+  if conju == None: conju = regular_third_singular_es(word)
+  if conju == None: conju = regular_endswith_c(word)
   if conju == None: conju = regular_one_syllable(word)
   if conju == None: conju = most_regular(word)
   return conju
@@ -344,8 +345,7 @@ auxiliary = ['be', 'do', 'have']
 modal = ['can', 'may', 'must', 'ought', 'shall', 'will']
 poly_conjus = ['found', 'fell', 'lay', 'bind', 'saw', 'ground', 'wound']
 
-path = "../inflection/"
-
+path = "../english-inflection/"
 read_cefr_conjus(path + "cefr_conjugations.tsv")
 read_epage_conjus(path + "englishpage_conjugations.txt")
 read_ginger_conjus(path + "gingersoftware_conjugations.txt")

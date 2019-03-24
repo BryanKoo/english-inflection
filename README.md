@@ -45,21 +45,23 @@ Verbs are inflected to express tense, voice, person, number, etc. and it is call
 ## Noun pluralization (numbers as well)
 Nouns are inflected to express number, that is plural.
 * There are 2 spellings; singular and plural
-  * basic rule is putting 's' (book > books)
+  * singular - original form that can be found in English dictionary
+  * plural(PL) - basic rule is putting 's' (book > books)
 * Some nouns are uncountable.
+* Some nouns use the same spell for both singular and plural (fish, sheep, salmon, deer, ..)
 * Some nouns have two or more different spellings for plural that can be used interchangeably.
 * Some nouns have two or more different spellings for plural according to the meaning.
 * Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (box > boxes)
 * There are many nouns that do not follow the basic or modified rule and those can be called irregular pluralization.
 * numbers may have plural (fifty > fifties), thus their pluralization should be supported
-* pronouns may have plural but mostly is not inflection but another word (I > we), except for other (other > others)
+* pronouns may have plural but mostly is not inflection but another word (I > we), except for 'other' (other > others)
 
-## Adjective/adverb comparison (some determiners as well)
+## Adjective/adverb comparative and superlative (some determiners as well)
 Adjective and adverbs are inflected to express comparison.
 * There are 3 spellings after inflection when a word has 1 syllable.
-  * positive
-  * comparative - basic rule is putting 'er' (fast > faster)
-  * superlative - basic rule is putting 'est' (fast > fastest)
+  * positive - original form that can be found in English dictionary
+  * comparative(CO) - basic rule is putting 'er' (fast > faster)
+  * superlative(SU) - basic rule is putting 'est' (fast > fastest)
 * When a word has more than 3 syllables, there are no inflection but use more/most for comparative/superlative.
 * Words with 2 syllable are irregular, some use inflection and some use more/most and some use both.
 * Some words are uncomparable.
@@ -72,9 +74,8 @@ Adjective and adverbs are inflected to express comparison.
 ## Software requiremants
 * modules: get_conjugation, get_plural, get_comparative
   * prerequisite: irregular inflection list for conjugation, pluralization, comparison
-  * input: word, inflection_type(if applicable)
-  * check if input word is infinitive/singular/positive or not
-  * obtain inflections regarding the input word
+  * input: word
+  * process: check if input word is infinitive/singular/positive or not then obtain inflections regarding the input word
   * output: infinitive/singular/positive, inflected word list with inflection type tag
 
 ## Process breakdown

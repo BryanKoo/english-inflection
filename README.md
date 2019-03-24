@@ -40,7 +40,7 @@ Verbs are inflected to express tense, voice, person, number, etc. and it is call
 * Some verbs have two or more different spellings for a specific conjugation according to the meaning.
 * Basic rule should be modified a little according to word endings, vowels and consonant phonetics. (go > goes)
 * There are many verbs that do not follow the basic or modified rule and those can be called irregular conjugation.
-* Auxiliary verbs may not have all 4 spellings (no PP spelling for can, will, ..)
+* Auxiliary verbs may not have all 4 conjugations (can, will have only the past conjugation)
 
 ## Noun pluralization (numbers as well)
 Nouns are inflected to express number, that is plural.

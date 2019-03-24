@@ -1,0 +1,139 @@
+addendum	addenda or addendums
+aircraft	aircraft
+albino	albinos
+alto	altos
+alumna	alumnae
+alumnus	alumni
+analysis	analyses
+antenna	antennae or antennas
+antithesis	antitheses
+apex	apices or apexes
+appendix	appendices or appendixes
+audio	audios
+axis	axes
+ 	 
+bacillus	bacilli
+bacterium	bacteria
+basis	bases
+beau	beaux or beaus
+bison	bison
+bureau	bureaux or bureaus
+ 	 
+canto	cantos
+cactus	cacti or cactus or cactuses
+casino	casinos
+château	châteaux or châteaus
+child	children
+clothes	clothes
+codex	codices
+concerto	concerti or concertos
+corpus	corpora
+crisis	crises
+criterion	criteria or criterions
+curriculum	curricula or curriculums
+ 	 
+datum	data
+deer	deer or deers
+diagnosis	diagnoses
+die	dice or dies
+dwarf	dwarves or dwarfs
+ 	 
+ellipsis	ellipses
+erratum	errata
+ 	 
+faux pas	faux pas
+fez	fezzes or fezes
+fish	fish or fishes
+focus	foci or focuses
+foot	feet or foot
+formula	formulae or formulas
+fungus	fungi or funguses
+ 	 
+genus	genera or genuses
+goose	geese
+graffito	graffiti
+grouse	grouse or grouses
+ 	 
+half	halves
+halo	halos
+hetero	heteros
+honorarium	honoraria
+hoof	hooves or hoofs
+hypothesis	hypotheses
+ 	 
+index	indices or indexes
+
+kimono	kimonos
+ 	 
+larva	larvae or larvas
+libretto	libretti or librettos
+loaf	loaves
+locus	loci
+louse	lice
+ 	 
+man	men
+matrix	matrices or matrixes
+medium	media or mediums
+memorandum	memoranda or memorandums
+minutia	minutiae
+moose	moose
+mouse	mice
+ 	 
+nebula	nebulae or nebulas
+nucleus	nuclei or nucleuses
+ 	 
+oasis	oases
+offspring	offspring or offsprings
+opus	opera or opuses
+ovum	ova
+ox	oxen or ox
+ 	 
+parenthesis	parentheses
+phenomenon	phenomena or phenomenons
+phylum	phyla
+portico	porticos
+prognosis	prognoses
+ 	 
+quiz	quizzes
+quarto	quartos
+ 	 
+radius	radii or radiuses
+referendum	referenda or referendums
+ 	 
+salmon	salmon or salmons
+scarf	scarves or scarfs
+self	selves
+series	series
+sheep	sheep
+shrimp	shrimp or shrimps
+silo	silos
+shrimp	shrimp or shrimps
+soliloquy	soliloquies
+sombrero	sombreros
+soprano	sopranos
+species	species
+staff	staffs or staves
+stimulus	stimuli
+stratum	strata
+swine	swine
+syllabus	syllabi or syllabuses
+symposium	symposia or symposiums
+synopsis	synopses
+synthesis	syntheses
+ 	 
+tableau	tableaux or tableaus
+thesis	theses
+thief	thieves
+tooth	teeth
+trout	trout or trouts
+tuna	tuna or tunas
+ 	 
+vertebra	vertebrae or vertebras
+vertex	vertices or vertexes
+vita	vitae
+vortex	vortices or vortexes
+ 	 
+wharf	wharves or wharfs
+wife	wives
+wolf	wolves
+woman	women

@@ -348,7 +348,7 @@ poly_conjus = ['found', 'fell', 'lay', 'bind', 'saw', 'ground', 'wound']
 path = "../english-inflection/"
 read_cefr_conjus(path + "cefr_conjugations.tsv")
 read_epage_conjus(path + "englishpage_conjugations.txt")
-read_ginger_conjus(path + "gingersoftware_conjugations.txt")
+read_ginger_conjus(path + "ginger_conjugations.txt")
 read_usinge_conjus(path + "usingenglish_conjugations.txt")
 
 if __name__ == "__main__":

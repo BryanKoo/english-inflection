@@ -25,7 +25,8 @@ We can correct each specific error with en-inflectors but it is difficult becaus
 
 ML focuses on overall performance or accuracy not each specific case.
 ML inferencing is usually much slower than rule-based implementation.
-There is no good reason to use ML for inflection.
+After all, there is no good reason to use ML for inflection.\
+The objective of this project it to provide practical and easy-to-modify python codes for getting inflections of English words.
 
 ## Verb conjugation (auxiliary/model verbs as well)
 Verbs are inflected to express tense, voice, person, number, etc. and it is called conjugation.

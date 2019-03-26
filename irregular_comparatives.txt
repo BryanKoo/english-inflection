@@ -1,0 +1,9 @@
+fun
+unhappy	unhappier, unhappiest
+lively	livelier, liveliest
+friendly	friendlier, friendliest
+unfriendly	unfriendlier, unfriendliest
+in	inner, innest, innermost
+up	upper, uppest, uppermost
+old	older, oldest, elder, eldest
+known better-known, best-known

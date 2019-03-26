@@ -28,7 +28,7 @@ ML inferencing is usually much slower than rule-based implementation.
 After all, there is no good reason to use ML for inflection.\
 The objective of this project it to provide practical and easy-to-modify python codes for getting inflections of English words. (En-inflectors used TypeScript, a superset of JavaScript.)
 
-## Verb conjugation (auxiliary/model verbs as well)
+## Verb(auxiliary/model verbs as well) conjugation
 Verbs are inflected to express tense, voice, person, number, etc. and it is called conjugation.
 * There are 5 spellings after conjugation
   * infinitive - original form that can be found in English dictionary
@@ -42,7 +42,7 @@ Verbs are inflected to express tense, voice, person, number, etc. and it is call
 * There are many verbs that do not follow the basic or modified rule and those can be called irregular conjugation.
 * Auxiliary verbs may not have all 4 conjugations (can, will have only the past conjugation)
 
-## Noun pluralization (numbers as well)
+## Noun(numbers as well) pluralization
 Nouns are inflected to express number, that is plural.
 * There are 2 spellings; singular and plural
   * singular - original form that can be found in English dictionary
@@ -56,7 +56,7 @@ Nouns are inflected to express number, that is plural.
 * numbers may have plural (fifty > fifties), thus their pluralization should be supported
 * pronouns may have plural but mostly is not inflection but another word (I > we), except for 'other' (other > others)
 
-## Adjective/adverb comparative and superlative (some determiners as well)
+## Adjective/adverb(some determiners as well) comparative and superlative
 Adjective and adverbs are inflected to express comparison.
 * There are 3 spellings after inflection when a word has 1 syllable.
   * positive - original form that can be found in English dictionary
@@ -84,7 +84,7 @@ Adjective and adverbs are inflected to express comparison.
 * Check whether input word is unconjugatable/uncountable/uncomparable
 * Check whether input word is a basic word(infinitive/singular/positive) or not
   * assume given word as a basic word if not solvable (e.g. fell)
-  * use infinitive/singular/positive if found instead of the input word
+  * use infinitive/singular/positive if found, instead of the input word
 * Check whether the word is in the irregular inflection list
   * get inflections if found
 * Apply rule according to word endings, vowels and consonant phonetics.

@@ -201,7 +201,6 @@ woman           women
 bison
 buffalo
 deer
-duck
 fish
 pike
 salmon

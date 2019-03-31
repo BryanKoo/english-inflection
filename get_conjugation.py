@@ -331,7 +331,7 @@ def get_conjugation(word):
     infinitive = find_infinitive_irregular(word)
     if infinitive == "":
       if word.endswith('s'):
-        intinitive = word
+        infinitive = word
       else:
         infinitive = find_infinitive_regular(word)
       if infinitive == "":

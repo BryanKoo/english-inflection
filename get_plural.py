@@ -58,14 +58,15 @@ def read_cefr_plurals(ufile):
     if not line: break
     plural = []
     line = line.replace("PLURAL", "")
-    line = line.replace(" or ", " ")
-    line = line.replace(", ", " ")
+    line = line.replace(" or ", ", ")
     tokens = line.split('\t')
     infinitive = tokens[0].strip()
     remained = tokens[1].strip()
-    tokens = remained.split(' ')
+    if remained == "UNCOUNTABLE":
+      remained = infinitive
+    tokens = remained.split(',')
     for token in tokens:
-      if token in plural:
+      if token.strip() in plural:
         pdb.set_trace()
       else:
         plural.append(token.strip())
@@ -198,8 +199,8 @@ es_exceptions = ['expense']
 
 path = "../english-inflection/"
 read_cefr_plurals(path + "cefr_plurals.tsv")
-read_bird_plurals(path + "birdgei_plurals.txt")
-read_thought_plurals(path + "thoughtco_plurals.txt")
+read_bird_plurals(path + "bird_plurals.txt")
+read_thought_plurals(path + "thought_plurals.txt")
 
 if __name__ == "__main__":
   if len(sys.argv) < 2:

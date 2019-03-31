@@ -325,7 +325,7 @@ def get_regular_conju(word):
   return conju
 
 def get_conjugation(word):
-  if word in poly_conjus:
+  if word in poly_conjus or word in irregular_tagged_conjus:
     infinitive = word
   else:
     infinitive = find_infinitive_irregular(word)

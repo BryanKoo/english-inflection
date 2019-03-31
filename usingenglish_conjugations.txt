@@ -109,6 +109,7 @@ Overdraw Overdrew Overdrawn Overdraws Overdrawing
 Overhear Overheard Overheard Overhears Overhearing
 Overtake Overtook Overtaken Overtakes Overtaking
 Pay Paid Paid Pays Paying
+permit permitted permitted permits permitting
 Preset Preset Preset Presets Presetting
 Prove Proved Proven/Proved Proves Proving
 Put Put Put Puts Putting

@@ -17,7 +17,7 @@ sys.setdefaultencoding('utf-8')
 
 def find_infinitive_irregular(word):
   for key in irregular_tagged_conjus:
-    if word == 'key': return key
+    if word == key: return key
     conju_list = irregular_tagged_conjus[key]
     for conju in conju_list:
       if word == conju[3:]: return key

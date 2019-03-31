@@ -40,6 +40,7 @@ dwarf	dwarves or dwarfs
  	 
 ellipsis	ellipses
 erratum	errata
+euro	euros
  	 
 faux pas	faux pas
 fez	fezzes or fezes

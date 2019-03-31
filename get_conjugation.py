@@ -24,7 +24,7 @@ def find_infinitive_irregular(word):
   return ""
 
 def doubled_consonant(candidate):
-  if count_syllable(candidate) == 1 and len(candidate) > 2 and candidate[-1] == candidate[-2]:
+  if count_syllable(candidate) == 1 and len(candidate) > 3 and candidate[-1] == candidate[-2]:
     word = candidate[:-1]
     if word[-1] in consonants and word[-1] != 'x' and word[-1] != 'w' and word[-2] in vowels and word[-3] in consonants:
       return True

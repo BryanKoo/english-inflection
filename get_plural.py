@@ -165,9 +165,10 @@ def ends_s(word):
   else:
     return None
 
+# default is putting just 's' not 'es'
 def ends_o(word):
   if word.endswith('o'):
-    return ['PL:'+word+'es']
+    return ['PL:'+word+'s']
   else:
     return None
 

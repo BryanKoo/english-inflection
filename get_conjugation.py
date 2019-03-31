@@ -330,7 +330,10 @@ def get_conjugation(word):
   else:
     infinitive = find_infinitive_irregular(word)
     if infinitive == "":
-      infinitive = find_infinitive_regular(word)
+      if word.endswith('s'):
+        intinitive = word
+      else:
+        infinitive = find_infinitive_regular(word)
       if infinitive == "":
         infinitive = word
   conju = get_irregular_conju(infinitive)

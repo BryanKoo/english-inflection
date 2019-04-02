@@ -3,6 +3,7 @@
 # uncountable should listed separately
 # added functionality of finding singular when input is plural
 # may not work correctly when singular ends with e > lets give two possible singulars
+# default plural for nouns ends with o is putting s not putting es
 import json
 import re
 import pickle

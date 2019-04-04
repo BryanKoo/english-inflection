@@ -211,10 +211,10 @@ vowels = ['a','e', 'i', 'o', 'u']
 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'q', 'p', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
 poly_comps = ['eager', 'bitter', 'silver', 'tender', 'slender', 'sheer', 'sober', 'clever', 'proper']
 
-path = "../english-inflection/"
-read_comps(path + "cefr_comparatives.tsv")
-read_comps(path + "irregular_comparatives.txt")
-read_comps(path + "uncomparables.txt")
+path = os.path.split(__file__)[0]
+read_comps(path + "/cefr_comparatives.tsv")
+read_comps(path + "/irregular_comparatives.txt")
+read_comps(path + "/uncomparables.txt")
 
 if __name__ == "__main__":
   if len(sys.argv) < 2:

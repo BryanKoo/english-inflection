@@ -199,10 +199,10 @@ vowels = ['a','e', 'i', 'o', 'u']
 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'q', 'p', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
 es_exceptions = ['expense']
 
-path = "../english-inflection/"
-read_cefr_plurals(path + "cefr_plurals.tsv")
-read_bird_plurals(path + "bird_plurals.txt")
-read_thought_plurals(path + "thought_plurals.txt")
+path = os.path.split(__file__)[0]
+read_cefr_plurals(os.path.join(path, "cefr_plurals.tsv"))
+read_bird_plurals(os.path.join(path, "bird_plurals.txt"))
+read_thought_plurals(os.path.join(path, "thought_plurals.txt"))
 
 if __name__ == "__main__":
   if len(sys.argv) < 2:

@@ -348,11 +348,11 @@ auxiliary = ['be', 'do', 'have']
 modal = ['can', 'may', 'must', 'ought', 'shall', 'will']
 poly_conjus = ['found', 'fell', 'lay', 'bind', 'saw', 'ground', 'wound', 'rent']
 
-path = "../english-inflection/"
-read_cefr_conjus(path + "cefr_conjugations.tsv")
-read_epage_conjus(path + "englishpage_conjugations.txt")
-read_ginger_conjus(path + "ginger_conjugations.txt")
-read_usinge_conjus(path + "usingenglish_conjugations.txt")
+path = os.path.split(__file__)[0]
+read_cefr_conjus(os.path.join(path, "cefr_conjugations.tsv"))
+read_epage_conjus(os.path.join(path, "englishpage_conjugations.txt"))
+read_ginger_conjus(os.path.join(path, "ginger_conjugations.txt"))
+read_usinge_conjus(os.path.join(path, "usingenglish_conjugations.txt"))
 
 if __name__ == "__main__":
   if len(sys.argv) < 2:

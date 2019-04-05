@@ -212,9 +212,9 @@ consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'q', 'p', '
 poly_comps = ['eager', 'bitter', 'silver', 'tender', 'slender', 'sheer', 'sober', 'clever', 'proper']
 
 path = os.path.split(__file__)[0]
-read_comps(path + "/cefr_comparatives.tsv")
-read_comps(path + "/irregular_comparatives.txt")
-read_comps(path + "/uncomparables.txt")
+read_comps(os.path.join(path, "cefr_comparatives.tsv"))
+read_comps(os.path.join(path, "irregular_comparatives.txt"))
+read_comps(os.path.join(path, "uncomparables.txt"))
 
 if __name__ == "__main__":
   if len(sys.argv) < 2:

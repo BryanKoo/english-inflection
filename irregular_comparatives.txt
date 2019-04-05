@@ -7,3 +7,4 @@ in	inner, innest, innermost
 up	upper, uppest, uppermost
 old	older, oldest, elder, eldest
 known better-known, best-known
+narrow narrower, narrowest

@@ -346,7 +346,7 @@ vowels = ['a','e', 'i', 'o', 'u']
 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'q', 'p', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
 auxiliary = ['be', 'do', 'have']
 modal = ['can', 'may', 'must', 'ought', 'shall', 'will']
-poly_conjus = ['found', 'fell', 'lay', 'bind', 'saw', 'ground', 'wound', 'rent']
+poly_conjus = ['found', 'fell', 'lay', 'bind', 'saw', 'ground', 'wound', 'rent', 'resent']
 
 path = os.path.split(__file__)[0]
 read_cefr_conjus(os.path.join(path, "cefr_conjugations.tsv"))

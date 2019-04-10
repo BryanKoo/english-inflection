@@ -130,8 +130,6 @@ pass                 passes
 
 penny               pennies
 
-person             people
-
 plateau             plateaux
 
 poppy               poppies

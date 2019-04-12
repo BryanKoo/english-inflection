@@ -102,6 +102,6 @@ python get_comparative.py good
   * input word for conjugation may not be verb
   * proper input word should be guranteed by caller of the module
 * Syllable counting may not be accurate
-  * inflection error due to wrong syllable counting can be handled by adding irregular inflection list
+  * inflection error due to wrong syllable counting is handled by irregular inflection list
 * Doubling last consonant may not be accurate because pronunciation is not considered for the determination.
-  * inflection error syllable counting can be handled by adding irregular inflection list
+  * inflection error syllable counting is handled by irregular inflection list

@@ -89,6 +89,13 @@ Adjective and adverbs are inflected to express comparison.
   * get inflections if found
 * Apply rule according to word endings, vowels and consonant phonetics.
 
+## How to use
+~~~
+python get_conjugation.py take
+python get_plural.py woman
+python get_comparative.py good
+~~~
+
 ## Caveats
 * It is not checked whether the input is proper or not for each inflections.
   * input word may not be English word like 'alskdjf'

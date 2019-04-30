@@ -4,11 +4,9 @@
 # added functionality of finding singular when input is plural
 # may not work correctly when singular ends with e > lets give two possible singulars
 # default plural for nouns ends with o is putting s not putting es
-import json
-import re
-import pickle
 import os, sys
 import pdb
+from define_plural import *
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -36,96 +34,6 @@ def find_singular_regular(word):
     if word == plural[3:]:
       return singular
   return ""
-
-def tag_plural(infinitive, plurals):
-  tagged_plurals = []
-  for plural in plurals:
-    tagged_plurals.append('PL:'+plural)
-  return tagged_plurals
-
-def append_plural(infinitive, plural):
-  if infinitive in irregular_tagged_plurals:
-    tagged_plural = tag_plural(infinitive, plural)
-    for word in tagged_plural:
-      if word not in irregular_tagged_plurals[infinitive]:
-        irregular_tagged_plurals[infinitive].append(word)
-  else:
-    irregular_tagged_plurals[infinitive] = tag_plural(infinitive, plural)
-
-def read_cefr_plurals(ufile):
-  uf = open(ufile, 'r')
-  while True:
-    line = uf.readline().strip()
-    if not line: break
-    plural = []
-    line = line.replace("PLURAL", "")
-    line = line.replace(" or ", ", ")
-    tokens = line.split('\t')
-    infinitive = tokens[0].strip()
-    remained = tokens[1].strip()
-    if remained == "UNCOUNTABLE":
-      remained = infinitive
-    tokens = remained.split(',')
-    for token in tokens:
-      if token.strip() in plural:
-        pdb.set_trace()
-      else:
-        plural.append(token.strip())
-    append_plural(infinitive, plural)
-  uf.close()
-
-def read_bird_plurals(ufile):
-  uf = open(ufile, 'r')
-  while True:
-    plural = []
-    line = uf.readline()
-    if not line: break
-    if len(line) <= 1: continue
-    line = " ".join(line.split())
-    tokens = line.split(' ')
-    infinitive = tokens[0].strip()
-    if len(tokens) == 1: plural.append(infinitive)
-    for i in range(1, len(tokens)):
-      if tokens[i].strip() == "": continue
-      plural.append(tokens[i])
-    append_plural(infinitive, plural)
-  uf.close()
-
-def read_thought_plurals(ufile):
-  uf = open(ufile, 'r')
-  while True:
-    plural = []
-    line = uf.readline()
-    if not line: break
-    line = line.strip()
-    if len(line) <= 1: continue
-    line = line.replace(" or ", " ")
-    line = " ".join(line.split())
-    tokens = line.split(' ')
-    infinitive = tokens[0].strip()
-    if len(tokens) == 1: plural.append(infinitive)
-    for i in range(1, len(tokens)):
-      if tokens[i].strip() == "": continue
-      plural.append(tokens[i])
-    append_plural(infinitive, plural)
-  uf.close()
-
-def read_usinge_plurals(ufile):
-  uf = open(ufile, 'r')
-  while True:
-    plural = []
-    line = uf.readline().strip()
-    if not line: break
-    if len(line) == 1: continue
-    line = line.replace("/", " ")
-    tokens = line.split(' ')
-    infinitive = tokens[0].lower().strip()
-    for i in range(1, len(tokens)):
-      if tokens[i].strip() != "" and tokens[i].strip() not in plural:
-        plural.append(tokens[i].lower().strip())
-    if infinitive == "": pdb.set_trace()
-    append_plural(infinitive, plural)
-  uf.close()
 
 def get_irregular_plural(word):
   if word in irregular_tagged_plurals:
@@ -194,15 +102,9 @@ def get_plural(word):
     plural = []
   return singular, plural
 
-irregular_tagged_plurals = {}
 vowels = ['a','e', 'i', 'o', 'u']
 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'q', 'p', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
 es_exceptions = ['expense']
-
-path = os.path.split(__file__)[0]
-read_cefr_plurals(os.path.join(path, "cefr_plurals.tsv"))
-read_bird_plurals(os.path.join(path, "bird_plurals.txt"))
-read_thought_plurals(os.path.join(path, "thought_plurals.txt"))
 
 if __name__ == "__main__":
   if len(sys.argv) < 2:

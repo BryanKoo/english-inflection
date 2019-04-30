@@ -5,11 +5,9 @@
 # added functionality of finding positive when input is conparative of superlative
 # may not work correctly when positive ends with e > lets provide two possible positives
 
-import json
-import re
-import pickle
 import os, sys
 import pdb
+from define_comparative import *
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -29,6 +27,7 @@ def doubled_consonant(candidate):
       return True
   return False
 
+# positive means the ordinary form of adverb/adjective
 def find_positive_regular(word):
   positive = ""
   positives = []
@@ -62,34 +61,6 @@ def find_positive_regular(word):
         if word == comp[3:]: return positive
   return ""
 
-def tag_comps(infinitive, comps):
-  tagged_comps = []
-  untagged_comps = []
-  for comp in comps:
-    if comp.endswith('er'):
-      tagged_comps.append('CO:'+comp)
-    elif comp.endswith('est'):
-      tagged_comps.append('SU:'+comp)
-    else:
-      untagged_comps.append(comp)
-  if len(untagged_comps) == 1:
-    tagged_comps.append('SU:'+untagged_comps[0])
-  elif len(untagged_comps) == 2:
-    tagged_comps.append('CO:'+untagged_comps[0])
-    tagged_comps.append('SU:'+untagged_comps[1])
-  elif len(untagged_comps) > 0:
-    pdb.set_trace()
-  return tagged_comps
-
-def append_comp(infinitive, comp):
-  tagged_comps = tag_comps(infinitive, comp)
-  if infinitive in irregular_tagged_comps:
-    for word in tagged_comps:
-      if word not in irregular_tagged_comps[infinitive]:
-        irregular_tagged_comps[infinitive].append(word)
-  else:
-    irregular_tagged_comps[infinitive] = tagged_comps
-
 # wrong counting but good for comparative: quiet, easy
 # wrong counting: fine
 def count_syllable(word):
@@ -107,28 +78,6 @@ def count_syllable(word):
   if word[-1] == 'e' and word[-2] in consonants:
     num_syll -= 1
   return num_syll
-
-# word /t comparative superlative
-def read_comps(ufile):
-  uf = open(ufile, 'r')
-  while True:
-    line = uf.readline().strip()
-    if not line: break
-    comp = []
-    line = line.replace(" or ", " ")
-    line = line.replace(", ", " ")
-    tokens = line.split('\t')
-    infinitive = tokens[0].strip()
-    if len(tokens) > 1:
-      remained = tokens[1].strip()
-      tokens = remained.split(' ')
-      for token in tokens:
-        if token in comp:
-          pdb.set_trace()
-        else:
-          comp.append(token.strip())
-    append_comp(infinitive, comp)
-  uf.close()
 
 def get_irregular_comp(word):
   if word in irregular_tagged_comps:
@@ -206,15 +155,9 @@ def get_comparative(word):
         comp = get_regular_comp(positive)
   return positive, comp
 
-irregular_tagged_comps = {}
 vowels = ['a','e', 'i', 'o', 'u']
 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'q', 'p', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
 poly_comps = ['eager', 'bitter', 'silver', 'tender', 'slender', 'sheer', 'sober', 'clever', 'proper']
-
-path = os.path.split(__file__)[0]
-read_comps(os.path.join(path, "cefr_comparatives.tsv"))
-read_comps(os.path.join(path, "irregular_comparatives.txt"))
-read_comps(os.path.join(path, "uncomparables.txt"))
 
 if __name__ == "__main__":
   if len(sys.argv) < 2:

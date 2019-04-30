@@ -1,3 +1,8 @@
 *.pyc
 *.pdf
+*.txt
+*.tsv
+prepare_conjugation.py
+prepare_plural.py
+prepare_comparative.py
 etc/

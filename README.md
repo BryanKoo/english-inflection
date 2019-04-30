@@ -89,12 +89,19 @@ Adjective and adverbs are inflected to express comparison.
   * get inflections if found
 * Apply rule according to word endings, vowels and consonant phonetics.
 
+## How to use
+~~~
+python get_conjugation.py take
+python get_plural.py woman
+python get_comparative.py good
+~~~
+
 ## Caveats
 * It is not checked whether the input is proper or not for each inflections.
   * input word may not be English word like 'alskdjf'
   * input word for conjugation may not be verb
   * proper input word should be guranteed by caller of the module
 * Syllable counting may not be accurate
-  * inflection error due to wrong syllable counting can be handled by adding irregular inflection list
+  * inflection error due to wrong syllable counting is handled by irregular inflection list
 * Doubling last consonant may not be accurate because pronunciation is not considered for the determination.
-  * inflection error syllable counting can be handled by adding irregular inflection list
+  * inflection error syllable counting is handled by irregular inflection list

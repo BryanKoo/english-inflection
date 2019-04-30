@@ -82,8 +82,8 @@ Adjective and adverbs are inflected to express comparison.
 * Read irregular inflection list from file
   * tag each word for grammartical usage
 * Check whether input word is unconjugatable/uncountable/uncomparable
-* Check whether input word is a basic word(infinitive/singular/positive) or not
-  * assume given word as a basic word if not solvable (e.g. fell)
+* Check whether input word is a base form(infinitive/singular/positive) or not
+  * assume given word as a base form it is the same as inflected form of other word (e.g. fell)
   * use infinitive/singular/positive if found, instead of the input word
 * Check whether the word is in the irregular inflection list
   * get inflections if found

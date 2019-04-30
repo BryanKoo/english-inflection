@@ -95,6 +95,11 @@ python get_conjugation.py take
 python get_plural.py woman
 python get_comparative.py good
 ~~~
+~~~
+node get_conjugation.js take
+node get_plural.js woman
+node get_comparative.js good
+~~~
 
 ## Caveats
 * It is not checked whether the input is proper or not for each inflections.

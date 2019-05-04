@@ -670,7 +670,7 @@ function count_syllable(word) {
 
 function regular_endsWith_e(word) {
   if (word.charAt(word.length-1) == 'e')
-    if (word.charAt(word.length-2) in ['e', 'y', 'o']) // free, dye, tiptoe
+    if (['e', 'y', 'o'].includes(word.charAt(word.length-2))) // free, dye, tiptoe
       return ['TS:'+word+'s', 'PC:'+word+'ing', 'PA:'+word+'d', 'PP:'+word+'d']
     else if (word.charAt(word.length-2) == 'i') // die, tie
       return ['TS:'+word+'s', 'PC:'+word.substring(0,word.length-2)+'ying', 'PA:'+word+'d', 'PP:'+word+'d']

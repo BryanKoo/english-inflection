@@ -72,6 +72,7 @@ Adjective and adverbs are inflected to express comparison.
 * Quantifiers, kinds of determiner, may have comparative/superlative (few/fewer/fewest, little/less/least) thus their inflection should be supported
 
 ## Software requiremants
+* language: python, javascript
 * modules: get_conjugation, get_plural, get_comparative
   * prerequisite: irregular inflection list for conjugation, pluralization, comparison
   * input: word

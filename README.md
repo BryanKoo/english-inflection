@@ -107,6 +107,7 @@ node get_comparative.js good
   * input word may not be English word like 'alskdjf'
   * input word for conjugation may not be verb
   * proper input word should be guranteed by caller of the module
+* It is not assumed that the input is singular when getting plural and the input is positive when getting comparative and the input is infinitive when getting conjugation.
 * Syllable counting may not be accurate
   * inflection error due to wrong syllable counting is handled by irregular inflection list
 * Doubling last consonant may not be accurate because pronunciation is not considered for the determination.
